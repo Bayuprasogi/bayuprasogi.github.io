@@ -55,6 +55,7 @@ h3{font-size:18px;font-weight:600}
 .card:hover{border-color:var(--acc);transform:translateX(4px)}
 .card p{color:var(--mute);font-size:15px;margin:4px 0 10px}
 .card a{color:var(--acc);font-size:14px}
+.shot{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid var(--line);border-radius:7px;margin-bottom:14px;background:#0b0d11}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
 .tags span{font:12px 'JetBrains Mono',monospace;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:2px 10px}
 .tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:20px}
@@ -116,8 +117,8 @@ body.no3d .hint{display:none}
     <section role="tabpanel" id="portofolio" aria-labelledby="t-portofolio" tabindex="0" hidden>
       <h2>Portofolio</h2>
       <div class="cards">
-        <article class="card"><h3>itsformapp</h3><p>Aplikasi internal PT Internasional Teknik Solusindo yang menggantikan formulir kertas: SPK servis, penilaian kinerja teknisi, peminjaman barang, surat jalan, dan kunjungan dengan template WhatsApp. Aplikasi internal, jadi tidak ada demo publik.</p><div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span></div></article>
-        <article class="card"><h3>Website itsscale.com</h3><p>Merawat situs perusahaan timbangan digital: memperbarui konten dan katalog produk, memperbaiki bug dan link rusak, serta mengoptimalkan kecepatan dan SEO.</p><div class="tags"><span>Website</span><span>SEO</span><span>Maintenance</span></div><p><a href="https://itsscale.com" rel="noopener">itsscale.com</a></p></article>
+        <article class="card"><img class="shot" src="img/itsformapp.jpg" width="1200" height="753" loading="lazy" alt="Dashboard itsformapp: notifikasi follow-up sales dan ringkasan jumlah formulir, departemen, tugas, dan pengguna. Nama orang disamarkan."><h3>itsformapp</h3><p>Aplikasi internal PT Internasional Teknik Solusindo yang menggantikan formulir kertas: SPK servis, penilaian kinerja teknisi, peminjaman barang, surat jalan, dan kunjungan dengan template WhatsApp. Aplikasi internal, jadi tidak ada demo publik.</p><div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span></div></article>
+        <article class="card"><img class="shot" src="img/itsscale.webp" width="1680" height="966" loading="lazy" alt="Halaman depan itsscale.com: judul Partner Terpercaya Solusi Penimbangan Digital di atas foto gedung PT Internasional Teknik Solusindo."><h3>Website itsscale.com</h3><p>Merawat situs perusahaan timbangan digital: memperbarui konten dan katalog produk, memperbaiki bug dan link rusak, serta mengoptimalkan kecepatan dan SEO.</p><div class="tags"><span>Website</span><span>SEO</span><span>Maintenance</span></div><p><a href="https://itsscale.com" rel="noopener">itsscale.com</a></p></article>
       </div>
     </section>
 
