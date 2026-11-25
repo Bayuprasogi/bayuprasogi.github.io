@@ -1,365 +1,565 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dimas Bayu Prasogi · IT & Web Developer</title>
-<meta name="description" content="Portofolio Dimas Bayu Prasogi, IT & Web Developer di Jakarta. Laravel, PHP, SQL.">
-<meta name="theme-color" content="#0F1115">
+<meta name="description" content="Portofolio Dimas Bayu Prasogi, IT & Web Developer di Jakarta. Aplikasi Laravel, perawatan situs, dan pengalaman lima peran sejak 2022.">
+<meta name="theme-color" content="#05061a">
 <meta property="og:title" content="Dimas Bayu Prasogi · IT & Web Developer">
-<meta property="og:description" content="Portofolio Dimas Bayu Prasogi, IT & Web Developer di Jakarta.">
+<meta property="og:description" content="Dari formulir kertas ke aplikasi harian. Portofolio Dimas Bayu Prasogi, IT & Web Developer di Jakarta.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1115'/%3E%3Cpath d='M16 5l10 6v10l-10 6-10-6V11z' fill='none' stroke='%23FFB547' stroke-width='2.4'/%3E%3C/svg%3E">
+<meta property="og:url" content="https://bayuprasogi.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f3cff'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='13' fill='white'%3EDB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Anton&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0F1115;--panel:rgba(20,23,29,.88);--line:#2A2F38;--ink:#ECEEF2;--mute:#A3ABB8;--acc:#FFB547;--acc-ink:#1A1408}
+:root{--bg:#ecebe7;--ink:#121212;--mute:#5f5d58;--line:#d3d1cb;--acc:#2f3cff;--dark:#0b0b0b}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{background:var(--bg);color:var(--ink);font:16px/1.65 'Space Grotesk',system-ui,sans-serif;overflow:hidden}
-body.no3d{background:radial-gradient(circle at 78% 50%,#2a2418 0,var(--bg) 55%)}
-#scene{position:fixed;inset:0;width:100%;height:100%;display:block}
-#scene.hover{cursor:pointer}
-.stage{position:fixed;inset:0;display:flex;align-items:center;padding:24px 16px 24px max(16px,6vw);perspective:1600px;pointer-events:none}
-.win{pointer-events:auto;width:min(640px,100%);height:min(600px,calc(100vh - 48px));height:min(600px,calc(100dvh - 48px));background:var(--panel);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:14px;box-shadow:0 50px 90px rgba(0,0,0,.6);display:flex;flex-direction:column;transform:rotateY(8deg);transition:transform .5s cubic-bezier(.2,.7,.2,1);will-change:transform}
-.bar{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line)}
-.dots{display:flex;gap:7px}.dots i{width:12px;height:12px;border-radius:50%;background:#3A404B}.dots i:first-child{background:var(--acc)}
-.path{font:13px 'JetBrains Mono',monospace;color:var(--mute)}
-.tabs{display:flex;gap:2px;padding:0 8px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{font:500 15px 'Space Grotesk',sans-serif;color:var(--mute);background:none;border:0;padding:12px 14px;min-height:46px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
-.tab:hover{color:var(--ink)}
-.tab[aria-selected=true]{color:var(--ink);border-color:var(--acc)}
-.tab:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.body{flex:1;overflow:auto;padding:30px 32px 36px;scrollbar-color:#3A404B transparent}
-[role=tabpanel][hidden]{display:none}
-[role=tabpanel]{animation:in .45s ease both}
-@keyframes in{from{opacity:0;transform:translateY(8px)}}
-h1{font-size:clamp(36px,5vw,54px);line-height:1.02;letter-spacing:-.025em;font-weight:700}
-h2{font-size:28px;line-height:1.15;letter-spacing:-.015em;margin-bottom:18px}
-h3{font-size:18px;font-weight:600}
-.lead{color:var(--mute);max-width:48ch;margin:16px 0 24px;font-size:17px}
-.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px;margin-bottom:26px}
-.meta dt{font:13px 'JetBrains Mono',monospace;color:var(--mute);padding-top:2px}
-.btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:9px;font:600 15px 'Space Grotesk';text-decoration:none;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer}
-.btn.pri{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
-.btn:hover{border-color:var(--acc)}
-.btn[aria-disabled=true]{color:var(--mute);cursor:default}
-.btn[aria-disabled=true]:hover{border-color:var(--line)}
-.note{font:13px 'JetBrains Mono',monospace;color:var(--acc);margin-bottom:14px}
-.tl{list-style:none;border-left:1px solid var(--line);margin-left:6px}
-.tl li{position:relative;padding:0 0 22px 22px}
-.tl li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--acc)}
-.tl time{font:13px 'JetBrains Mono',monospace;color:var(--mute)}
-.tl p{color:var(--mute);font-size:15px}
-.cards{display:grid;gap:12px}
-.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:rgba(255,255,255,.02);transition:border-color .2s,transform .2s}
-.card:hover{border-color:var(--acc);transform:translateX(4px)}
-.card p{color:var(--mute);font-size:15px;margin:4px 0 10px}
-.card a{color:var(--acc);font-size:14px}
-.shot{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid var(--line);border-radius:7px;margin-bottom:14px;background:#0b0d11}
-.tags{display:flex;gap:6px;flex-wrap:wrap}
-.tags span{font:12px 'JetBrains Mono',monospace;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:2px 10px}
-.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:20px}
-.tools h3{font:600 13px 'JetBrains Mono',monospace;color:var(--acc);margin-bottom:8px}
-.tools ul{list-style:none;font-size:15px}
-.tools li{padding:4px 0;border-bottom:1px solid var(--line)}
-.prose p{color:var(--mute);margin-bottom:14px;max-width:56ch}
-.links{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
-.links dt{font:13px 'JetBrains Mono',monospace;color:var(--mute);padding-top:2px}
-.links a{color:var(--acc)}
-.hint{position:fixed;right:24px;bottom:20px;font:13px 'JetBrains Mono',monospace;color:var(--mute);pointer-events:none;transition:opacity .4s}
-body.no3d .hint{display:none}
-@media (max-width:820px){
-  .stage{padding:16px;justify-content:center;align-items:flex-end}
-  .win{height:calc(100vh - 32px - 28vh);height:calc(100dvh - 32px - 28dvh);transform:none}
-  .body{padding:24px 20px 28px}
-  .hint{display:none}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* lenis: scroll halus */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+/* teks dipecah per kata; .w jadi masker, .wi yang bergerak */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em .08em .16em 0;margin:-.1em -.08em -.16em 0}
+.wi{display:inline-block;transform-origin:0 100%}
+.big .w{overflow:visible}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 'Inter Tight',system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.mono,.lbl{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+.lbl{color:var(--mute)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{padding-left:clamp(16px,2.2vw,32px)!important;padding-right:clamp(16px,2.2vw,32px)!important}
+/* garis kolom tipis di latar */
+.grid{background-image:linear-gradient(90deg,rgba(0,0,0,.055) 1px,transparent 1px);background-size:calc((100% - 1px)/6) 100%}
+
+/* menu pil melayang */
+#nav{position:fixed;top:14px;left:50%;z-index:50;transform:translate(-50%,-90px);transition:transform .45s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:12px;padding:8px 10px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+#nav.on{transform:translate(-50%,0)}
+#nav a{text-decoration:none;padding:8px 12px;border-radius:8px}
+#nav a.mono{font-size:11px}
+#nav a:hover{background:#efeeea}
+#nav .home{font:600 17px 'Inter Tight';letter-spacing:-.03em;padding:6px 18px}
+@media (max-width:700px){#nav .hide{display:none}#nav{width:calc(100% - 24px);justify-content:space-between}}
+
+/* hero: helai garis biru yang mengalir + kubus kaca berisi </> dengan garis penghubung (konsep busybox) */
+#hero{position:relative;min-height:100vh;min-height:100svh;background:#05061a;color:#fff;overflow:hidden;display:flex;flex-direction:column}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#hero>.wrap{position:relative;z-index:2}
+.hMid{margin-top:auto;padding-top:40px}
+.kick{color:#9aa3ff}
+#word{font:500 clamp(40px,4.4vw,68px)/1.02 'Inter Tight',sans-serif;letter-spacing:-.045em;margin-top:14px}
+.hBot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding-top:40px;padding-bottom:26px}
+.tag{max-width:400px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.7)}
+.hMail{text-decoration:none;color:rgba(255,255,255,.8)}
+.hMail:hover{color:#fff}
+.hline{position:absolute;left:0;right:0;top:50%;height:1px;z-index:1;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2) 12%,rgba(255,255,255,.2) 88%,transparent)}
+.nodes{position:absolute;inset:0;z-index:1;pointer-events:none}
+.nodes span{position:absolute;left:0;top:0;display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.78);white-space:nowrap;opacity:0;will-change:transform}
+.nodes span::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:#8f97ff;box-shadow:0 0 10px #5c68ff}
+@media (max-width:700px){.nodes{display:none}.hBot{flex-direction:column;align-items:flex-start;gap:14px}}
+
+section{scroll-margin-top:80px}
+/* tentang */
+#tentang{padding:140px 0 120px}
+.two{display:grid;grid-template-columns:1fr 2fr;gap:32px}
+.big{font-size:clamp(28px,3.6vw,52px);line-height:1.12;letter-spacing:-.035em;font-weight:500}
+.ticks{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px;margin-top:48px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;padding-top:14px;border-top:1px solid var(--line)}
+.ticks li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--acc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.5 2.5L13 6.5' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E")}
+@media (max-width:800px){.two{grid-template-columns:1fr}.ticks{grid-template-columns:1fr}}
+
+/* proyek */
+#proyek{padding:40px 0 140px}
+.secHead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.secHead h2{font-size:clamp(40px,6vw,88px);line-height:.95;letter-spacing:-.05em;font-weight:500}
+.projs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proj .pane{border-radius:14px;aspect-ratio:4/3.3;display:grid;place-items:center;padding:9%;overflow:hidden}
+.proj .pane img{width:100%;height:auto;border-radius:8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.proj:hover .pane img{transform:translateY(-6px) scale(1.02)}
+.proj h3{font-size:26px;letter-spacing:-.03em;font-weight:500;margin-top:18px}
+.proj p{color:var(--mute);max-width:56ch;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips span{font:11px 'IBM Plex Mono';text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+@media (max-width:800px){.projs{grid-template-columns:1fr}}
+
+/* ruang proyek: kamera terbang menembus karya yang melayang (dipakai kalau WebGL jalan) */
+#proyek .space{display:none}
+#proyek.ruang{padding:0;height:640vh;scroll-margin-top:0;background:#070b2e}
+#proyek.ruang .flat{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#proyek.ruang .space{display:block;position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;color:#fff;
+  background:radial-gradient(ellipse 60% 55% at 50% 42%,rgba(47,60,255,.32),transparent 72%),#070b2e}
+.space::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.9;
+  background-image:linear-gradient(90deg,rgba(150,165,255,.1) 1px,transparent 1px),linear-gradient(rgba(150,165,255,.08) 1px,transparent 1px),radial-gradient(circle,rgba(190,200,255,.28) .8px,transparent 1.4px);
+  background-size:calc((100% - 1px)/6) 100%,100% 25vh,22px 22px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000 35%,transparent 92%);mask-image:radial-gradient(ellipse at 50% 45%,#000 35%,transparent 92%)}
+#ruang{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hud{position:absolute;inset:0;pointer-events:none;padding:88px clamp(16px,2.2vw,32px) 28px}
+.hud h2{font-size:clamp(40px,6vw,88px);line-height:.95;letter-spacing:-.05em;font-weight:500}
+.hud .lbl{color:#9aa3ff;margin-top:12px}
+.hud .cnt{position:absolute;top:92px;right:clamp(16px,2.2vw,32px);text-align:right;color:#9aa3ff}
+.hud .cnt b{display:block;font:400 clamp(40px,5vw,72px)/1 Anton,sans-serif;color:#fff;letter-spacing:0;margin-bottom:6px}
+.hud .bar{width:150px;height:2px;background:rgba(255,255,255,.15);margin:12px 0 0 auto}
+.hud .bar i{display:block;height:100%;width:0;background:#fff}
+.dial{position:absolute;left:clamp(16px,2.2vw,32px);bottom:28px;width:96px;height:96px}
+.coord{position:absolute;right:clamp(16px,2.2vw,32px);bottom:28px;color:#7f89d8;font-size:11px;line-height:1.8;text-align:right}
+.aim{position:absolute;left:50%;top:44%;width:14px;height:14px;transform:translate(-50%,-50%);opacity:.5}
+.aim::before,.aim::after{content:"";position:absolute;background:#c9cdf5}
+.aim::before{left:6px;top:0;width:2px;height:14px}.aim::after{top:6px;left:0;height:2px;width:14px}
+.cap{position:absolute;left:16px;right:16px;bottom:7vh;max-width:560px;margin:0 auto;text-align:center;opacity:0}
+.cap .k{color:#9aa3ff}
+.cap .pill{display:inline-block;margin-top:8px;border:1px solid rgba(170,180,255,.55);background:rgba(10,15,61,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:99px;padding:8px 20px;font-size:clamp(18px,1.6vw,22px);letter-spacing:-.02em;font-weight:500}
+.cap .t{color:#c9cdf5;font-size:15px;margin-top:10px}
+.cap .chips{justify-content:center}
+.cap .chips span{border-color:rgba(170,180,255,.35);color:#c9cdf5}
+.cap .go{display:inline-block;margin-top:14px;pointer-events:auto;color:#fff;border-bottom:1px solid rgba(255,255,255,.6);text-decoration:none;padding-bottom:2px}
+.cap .go:hover{border-color:#fff}
+.cap .go[hidden]{display:none}
+@media (max-width:700px){.dial,.coord{display:none}.hud .cnt{top:150px}.hud .bar{width:90px}.cap{bottom:5vh}.cap .t{font-size:14px}}
+
+/* kata besar di hitam: pengalaman */
+#jalan{background:var(--dark);color:#fff;height:calc(100vh * 5);scroll-margin-top:0}
+.motion .job{transition:none}
+.stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;grid-template-columns:minmax(260px,1fr) 2fr;align-items:center;gap:32px}
+.rings{position:absolute;left:50%;top:50%;width:min(130vh,130vw);aspect-ratio:1;transform:translate(-40%,-50%);pointer-events:none;opacity:.5}
+.words{position:relative;font:400 clamp(40px,7.6vw,122px)/.95 Anton,'Inter Tight',sans-serif;text-transform:uppercase;letter-spacing:-.005em}
+.words li{list-style:none;color:#2b2b2b;transition:color .4s}
+.words li.on{color:#fff}
+.after{font-size:clamp(20px,2.2vw,32px);line-height:1.15;margin-top:22px;letter-spacing:-.02em}
+.after em{font-style:normal;border:1.5px solid #fff;border-radius:99px;padding:0 .35em}
+.cards{position:relative;min-height:330px}
+.job{position:absolute;inset:0 auto auto 0;width:100%;max-width:380px;opacity:0;transform:translateY(16px);transition:opacity .45s,transform .45s}
+.job.on{opacity:1;transform:none}
+.job .top{display:flex;justify-content:space-between;border-top:1px solid #333;padding-top:12px;color:#9a9a9a}
+.job h3{font-size:26px;font-weight:500;letter-spacing:-.02em;margin-top:14px;line-height:1.2}
+.job .at{color:#9a9a9a;font-size:15px}
+.job p{color:#cfcfcf;font-size:15px;margin-top:10px}
+.job .bawa{margin-top:14px;background:#1a1a1a;border-left:2px solid var(--acc);padding:10px 14px;border-radius:0 8px 8px 0;color:#fff}
+.job .bawa b{display:block;font:11px 'IBM Plex Mono';text-transform:uppercase;letter-spacing:.06em;color:#8f97ff;font-weight:400}
+@media (max-width:800px){.stick{grid-template-columns:1fr;align-content:center;gap:24px}.cards{order:2;min-height:300px}.rings{transform:translate(-50%,-50%)}}
+
+/* bukan baru mulai */
+#bukti{padding:120px 0 80px;overflow:hidden}
+#bukti h2{font-size:clamp(56px,12vw,190px);line-height:.85;letter-spacing:-.06em;font-weight:500;white-space:nowrap}
+.rows{margin-top:40px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
+.row h3{font-size:clamp(24px,2.4vw,34px);font-weight:500;letter-spacing:-.03em}
+.row div{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+.row .th{aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:#dddbd5;display:grid;place-items:center;font:500 26px 'Inter Tight';letter-spacing:-.04em;color:var(--acc)}
+.row .th img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.row p{color:var(--mute);font-size:15px}
+.row p b{color:var(--ink);font-weight:600}
+@media (max-width:700px){.row{grid-template-columns:1fr;gap:12px}}
+
+/* tanya jawab */
+#faq{padding:80px 0 140px}
+.faq{max-width:900px;margin:40px auto 0}
+.faq details{border-bottom:1px solid #c9c7c0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-size:clamp(18px,1.6vw,22px);letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;color:var(--mute);max-width:70ch}
+
+/* penutup biru */
+#kontak{background:var(--acc);color:#fff;padding:90px 0 30px}
+#kontak h2{font-size:clamp(44px,8.4vw,140px);line-height:.92;letter-spacing:-.055em;font-weight:500}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.links a{display:block;text-decoration:none;border-top:1px solid rgba(255,255,255,.45);padding-top:14px}
+.links a span{display:block;font-size:clamp(18px,1.6vw,24px);letter-spacing:-.02em;margin-top:6px;overflow-wrap:anywhere}
+.links a:hover span{text-decoration:underline}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:80px;color:rgba(255,255,255,.7)}
+@media (max-width:700px){.links{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style></head>
 <body>
-<canvas id="scene" aria-hidden="true"></canvas>
-<div class="stage">
-<main class="win" id="win">
-  <div class="bar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="path" id="path">~/dimas/profil</span></div>
-  <div class="tabs" role="tablist" aria-label="Bagian portofolio">
-    <button class="tab" role="tab" aria-selected="true" aria-controls="profil" id="t-profil">Profil</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="pengalaman" id="t-pengalaman" tabindex="-1">Pengalaman</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="portofolio" id="t-portofolio" tabindex="-1">Portofolio</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="tools" id="t-tools" tabindex="-1">Tools</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="tentang" id="t-tentang" tabindex="-1">Tentang</button>
+
+<nav id="nav" aria-label="Menu">
+  <a class="mono hide" href="#tentang">Tentang</a><a class="mono hide" href="#proyek">Proyek</a>
+  <a class="home" href="#hero">Dimas Bayu</a>
+  <a class="mono hide" href="#jalan">Pengalaman</a><a class="mono" href="#kontak">Kontak</a>
+</nav>
+
+<header id="hero">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <span class="hline" aria-hidden="true"></span>
+  <div class="nodes mono" aria-hidden="true"><span>Laravel</span><span>MySQL</span><span>itsscale.com</span><span>SPK servis</span><span>WhatsApp</span><span>GitHub</span></div>
+  <div class="hMid wrap">
+    <p class="kick mono">Dimas Bayu Prasogi · IT &amp; Web Developer</p>
+    <h1 id="word">Dari formulir kertas<br>ke aplikasi harian</h1>
   </div>
-  <div class="body" id="body">
-    <!-- PROFIL -->
-    <section role="tabpanel" id="profil" aria-labelledby="t-profil" tabindex="0">
-      <h1>Dimas Bayu<br>Prasogi</h1>
-      <p class="lead">IT & Web Developer di PT Internasional Teknik Solusindo. Saya merawat situs perusahaan, membangun aplikasi internal dengan Laravel, dan menangani dukungan IT sehari-hari.</p>
-      <dl class="meta"><dt>fokus</dt><dd>Laravel, PHP, SQL</dd><dt>studi</dt><dd>Teknik Informatika, Universitas Dian Nusantara</dd><dt>lokasi</dt><dd>Jakarta</dd></dl>
-      <div class="btns">
-        <button class="btn pri" data-go="portofolio">Lihat proyek</button>
-        <!-- Taruh file cv.pdf di folder yang sama, lalu ganti baris di bawah menjadi: <a class="btn" href="cv.pdf" download>Unduh CV</a> -->
-        <span class="btn" aria-disabled="true">CV menyusul</span>
+  <div class="hBot wrap">
+    <p class="tag">Saya membangun aplikasi Laravel untuk sales, teknisi, dan bagian pengadaan, dan merawat situs perusahaan itsscale.com.</p>
+    <a class="hMail mono" href="mailto:dimasbayuprasogi@gmail.com">dimasbayuprasogi@gmail.com</a>
+  </div>
+</header>
+
+<main>
+  <section id="tentang" class="grid wrap">
+    <div class="two"><p class="lbl">Tentang saya</p>
+      <div><p class="big">IT & Web Developer di PT Internasional Teknik Solusindo, Jakarta. Saya membangun aplikasi Laravel untuk orang-orang di lapangan: sales, teknisi, dan bagian pengadaan.</p>
+        <ul class="ticks">
+          <li>Membangun aplikasi internal dengan Laravel</li>
+          <li>Merawat situs perusahaan itsscale.com</li>
+          <li>Mengelola jaringan dan dukungan IT kantor</li>
+          <li>Kuliah Teknik Informatika, Universitas Dian Nusantara</li>
+        </ul></div></div>
+  </section>
+
+  <section id="proyek">
+    <div class="space" aria-hidden="true">
+      <canvas id="ruang"></canvas>
+      <div class="hud">
+        <h2>Proyek</h2><p class="lbl">Ruang kerja · scroll untuk terbang</p>
+        <div class="cnt mono"><b id="rNum">01</b><span id="rTot">dari 06</span><div class="bar"><i id="rBar"></i></div></div>
+        <svg class="dial" viewBox="0 0 100 100"><g fill="none" stroke="rgba(170,180,255,.35)" stroke-width="1"><circle cx="50" cy="50" r="47"/><circle cx="50" cy="50" r="33" stroke-dasharray="2 4"/></g><path id="rArc" d="" fill="none" stroke="#fff" stroke-width="2"/><circle id="rDot" cx="50" cy="3" r="3" fill="#fff"/></svg>
+        <p class="coord mono" id="rCo">X 0.00<br>Y 0.00<br>Z 0.00</p>
+        <span class="aim"></span>
+        <div class="cap" id="rCap"><p class="k mono"></p><p class="pill"></p><p class="t"></p><div class="chips"></div><a class="go mono" href="#kontak" tabindex="-1" hidden></a></div>
       </div>
-    </section>
+    </div>
+    <div class="flat wrap">
+    <div class="secHead"><h2>Proyek</h2><p class="lbl">2 proyek · masih berjalan</p></div>
+    <div class="projs">
+      <article class="proj"><div class="pane" style="background:#f0b99c"><img src="img/itsformapp.jpg" width="1200" height="753" loading="lazy" alt="Dashboard itsformapp dengan notifikasi follow-up sales dan ringkasan formulir. Nama orang disamarkan."></div>
+        <h3>itsformapp</h3><p>Aplikasi internal yang menggantikan formulir kertas: SPK servis, penilaian kinerja teknisi, peminjaman barang, surat jalan, dan kunjungan dengan template WhatsApp. Aplikasi internal, jadi tidak ada demo publik.</p>
+        <div class="chips"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span></div></article>
+      <article class="proj"><div class="pane" style="background:#c7d6c3"><img src="img/itsscale.webp" width="1680" height="966" loading="lazy" alt="Halaman depan itsscale.com: Partner Terpercaya Solusi Penimbangan Digital."></div>
+        <h3>Website itsscale.com</h3><p>Merawat situs perusahaan timbangan digital: konten dan katalog produk, perbaikan bug dan link rusak, serta optimasi kecepatan dan SEO. <a href="https://itsscale.com" rel="noopener">itsscale.com ↗</a></p>
+        <div class="chips"><span>Website</span><span>SEO</span><span>Maintenance</span></div></article>
+    </div>
+    </div>
+  </section>
 
-    <!-- PENGALAMAN -->
-    <section role="tabpanel" id="pengalaman" aria-labelledby="t-pengalaman" tabindex="0" hidden>
-      <h2>Pengalaman</h2>
-      <ol class="tl">
-        <li><time>Agu 2026 – sekarang</time><h3>Web Developer, PT Internasional Teknik Solusindo</h3><p>Merawat dan mengoptimalkan situs perusahaan (konten, bug, kecepatan, SEO), menangani masalah hardware, software, dan jaringan, serta mengelola LAN/WAN dan hak akses pengguna.</p></li>
-        <li><time>Mei – Agu 2026</time><h3>Sales Assistant, PT Internasional Teknik Solusindo</h3><p>Mendampingi proses penjualan dari pertanyaan awal sampai closing, menyusun penawaran harga, dan memperbarui database pelanggan.</p></li>
-        <li><time>Agu 2025 – Mar 2026</time><h3>Procurement, PT Mandiri Raya Tangguh</h3><p>Mengelola pengadaan barang dan jasa: mencari dan memilih supplier, negosiasi kontrak, dan menjaga stok tetap cukup.</p></li>
-        <li><time>Jun – Sep 2024</time><h3>Electrical Technician (magang), PT Murni Solusindo Nusantara</h3><p>Perawatan rutin mesin, diagnosis kerusakan hardware dan software, serta uji performa setelah perbaikan.</p></li>
-        <li><time>Nov 2022 – Apr 2024</time><h3>Telemarketing Operator, TNG Company</h3><p>Menawarkan produk pupuk ke calon klien lewat telepon, presentasi produk, dan menindaklanjuti calon pembeli.</p></li>
-      </ol>
-    </section>
-
-    <!-- PORTOFOLIO -->
-    <section role="tabpanel" id="portofolio" aria-labelledby="t-portofolio" tabindex="0" hidden>
-      <h2>Portofolio</h2>
+  <section id="jalan" aria-label="Pengalaman">
+    <div class="stick wrap">
+      <svg class="rings" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#2a2a2a" stroke-width=".18"><circle cx="50" cy="50" r="49"/><circle cx="50" cy="50" r="38"/><circle cx="50" cy="50" r="27"/></g><circle id="ringDot" cx="50" cy="1" r=".9" fill="#fff"/></svg>
       <div class="cards">
-        <article class="card"><img class="shot" src="img/itsformapp.jpg" width="1200" height="753" loading="lazy" alt="Dashboard itsformapp: notifikasi follow-up sales dan ringkasan jumlah formulir, departemen, tugas, dan pengguna. Nama orang disamarkan."><h3>itsformapp</h3><p>Aplikasi internal PT Internasional Teknik Solusindo yang menggantikan formulir kertas: SPK servis, penilaian kinerja teknisi, peminjaman barang, surat jalan, dan kunjungan dengan template WhatsApp. Aplikasi internal, jadi tidak ada demo publik.</p><div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span></div></article>
-        <article class="card"><img class="shot" src="img/itsscale.webp" width="1680" height="966" loading="lazy" alt="Halaman depan itsscale.com: judul Partner Terpercaya Solusi Penimbangan Digital di atas foto gedung PT Internasional Teknik Solusindo."><h3>Website itsscale.com</h3><p>Merawat situs perusahaan timbangan digital: memperbarui konten dan katalog produk, memperbaiki bug dan link rusak, serta mengoptimalkan kecepatan dan SEO.</p><div class="tags"><span>Website</span><span>SEO</span><span>Maintenance</span></div><p><a href="https://itsscale.com" rel="noopener">itsscale.com</a></p></article>
+        <article class="job" data-i="0"><div class="top mono"><span>01</span><span>Nov 2022 – Apr 2024</span></div><h3>Telemarketing Operator</h3><p class="at">TNG Company · Tangerang</p><p>Menawarkan produk pupuk lewat telepon, presentasi produk, dan menindaklanjuti calon pembeli.</p><p class="bawa"><b>yang saya bawa</b>Cara bicara dengan pelanggan, dan tetap tenang saat ditolak.</p></article>
+        <article class="job" data-i="1"><div class="top mono"><span>02</span><span>Jun – Sep 2024</span></div><h3>Electrical Technician (magang)</h3><p class="at">PT Murni Solusindo Nusantara · Jakarta</p><p>Perawatan rutin mesin, diagnosis kerusakan hardware dan software, serta uji performa setelah perbaikan.</p><p class="bawa"><b>yang saya bawa</b>Troubleshooting langkah demi langkah: cari penyebabnya dulu, baru perbaiki.</p></article>
+        <article class="job" data-i="2"><div class="top mono"><span>03</span><span>Agu 2025 – Mar 2026</span></div><h3>Procurement</h3><p class="at">PT Mandiri Raya Tangguh · Tangerang</p><p>Mencari dan memilih supplier, negosiasi kontrak, dan menjaga stok tetap cukup.</p><p class="bawa"><b>yang saya bawa</b>Terbiasa membaca data stok dan vendor, dan bernegosiasi.</p></article>
+        <article class="job" data-i="3"><div class="top mono"><span>04</span><span>Mei – Agu 2026</span></div><h3>Sales Assistant</h3><p class="at">PT Internasional Teknik Solusindo</p><p>Mendampingi penjualan dari pertanyaan awal sampai closing, menyusun penawaran harga, dan memperbarui database pelanggan.</p><p class="bawa"><b>yang saya bawa</b>Memahami apa yang sebenarnya dibutuhkan pengguna, dan kenapa database pelanggan harus rapi.</p></article>
+        <article class="job" data-i="4"><div class="top mono"><span>05</span><span>Agu 2026 – sekarang</span></div><h3>Web Developer</h3><p class="at">PT Internasional Teknik Solusindo</p><p>Merawat situs perusahaan, membangun aplikasi internal dengan Laravel, serta mengelola jaringan dan dukungan IT.</p><p class="bawa"><b>semuanya terpakai di sini</b>Bekal dari empat pekerjaan sebelumnya jadi dasar aplikasi yang saya buat.</p></article>
       </div>
-    </section>
+      <div><ol class="words" aria-hidden="true"><li>Komunikasi</li><li>Troubleshooting</li><li>Data</li><li>Pengguna</li><li>Kode</li></ol>
+        <p class="after">Lima pekerjaan.<br>Satu <em>arah</em>.</p></div>
+    </div>
+  </section>
 
-    <!-- TOOLS -->
-    <section role="tabpanel" id="tools" aria-labelledby="t-tools" tabindex="0" hidden>
-      <h2>Tools</h2>
-      <div class="tools">
-        <div><h3>web</h3><ul><li>Laravel</li><li>PHP</li><li>Python & Flask</li><li>HTML, CSS, JavaScript</li></ul></div>
-        <div><h3>database</h3><ul><li>SQL</li><li>MySQL</li><li>Microsoft SQL Server</li></ul></div>
-        <div><h3>kerja harian</h3><ul><li>VS Code</li><li>XAMPP</li><li>Laragon</li><li>Git & GitHub</li><li>Microsoft Excel</li></ul></div>
-        <div><h3>IT support</h3><ul><li>Troubleshooting hardware & software</li><li>Jaringan LAN/WAN</li><li>Perawatan website & SEO</li></ul></div>
-      </div>
-    </section>
+  <section id="bukti" class="grid wrap">
+    <h2>Bukan baru mulai</h2>
+    <div class="rows">
+      <div class="row"><h3>4 tahun bekerja</h3><div><span class="th">'22</span><p><b>Sejak November 2022.</b> Telemarketing, teknisi, procurement, sales, lalu web developer.</p></div></div>
+      <div class="row"><h3>2 proyek berjalan</h3><div><span class="th"><img src="img/itsscale.webp" alt="" loading="lazy"></span><p><b>itsformapp dan itsscale.com.</b> Satu aplikasi internal Laravel, satu situs perusahaan yang saya rawat.</p></div></div>
+      <div class="row"><h3>Laravel setiap hari</h3><div><span class="th">&lt;/&gt;</span><p><b>Laravel, PHP, MySQL, SQL Server.</b> Dikerjakan di VS Code dan Laragon, disimpan di Git dan GitHub. Juga Python &amp; Flask.</p></div></div>
+      <div class="row"><h3>Paham sisi pengguna</h3><div><span class="th">5</span><p><b>Pernah di kursi mereka.</b> Sebagai sales dan procurement, saya tahu data apa yang sebenarnya dibutuhkan tim.</p></div></div>
+    </div>
+  </section>
 
-    <!-- TENTANG -->
-    <section role="tabpanel" id="tentang" aria-labelledby="t-tentang" tabindex="0" hidden>
-      <h2>Tentang</h2>
-      <div class="prose">
-        <p>Jalan saya ke web development tidak lurus. Saya pernah di telemarketing, magang sebagai teknisi listrik, mengurus procurement, lalu jadi sales assistant sebelum pindah ke tim IT sebagai web developer.</p>
-        <p>Pengalaman itu membuat saya paham kebutuhan orang yang memakai sistemnya: sales yang butuh data pelanggan rapi, bagian pengadaan yang butuh stok jelas, teknisi yang butuh laporan cepat. Itu yang saya bawa saat membangun aplikasi dengan Laravel.</p>
-      </div>
-      <dl class="links">
-        <dt>github</dt><dd><a href="https://github.com/bayuprasogi" rel="me">github.com/bayuprasogi</a></dd>
-        <dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/dimasbayuprasogi/" rel="me">linkedin.com/in/dimasbayuprasogi</a></dd>
-        <dt>email</dt><dd><a href="mailto:dimasbayuprasogi@gmail.com">dimasbayuprasogi@gmail.com</a></dd>
-      </dl>
-    </section>
-  </div>
+  <section id="faq" class="wrap">
+    <p class="lbl" style="text-align:center">Pertanyaan yang sering muncul</p>
+    <div class="faq">
+      <details><summary>Apa yang sedang dikerjakan sekarang?</summary><p>Dua proyek di PT Internasional Teknik Solusindo: itsformapp, aplikasi internal Laravel yang menggantikan formulir kertas, dan perawatan situs itsscale.com.</p></details>
+      <details><summary>Kenapa jalurnya berbelok ke web development?</summary><p>Jalan saya ke web development tidak lurus: telemarketing, magang teknisi, procurement, lalu sales assistant. Pengalaman itu membuat saya paham kebutuhan orang yang memakai sistemnya: sales butuh data pelanggan rapi, pengadaan butuh stok jelas, teknisi butuh laporan cepat. Itu yang saya bawa saat membangun aplikasi.</p></details>
+      <details><summary>Tools apa yang dipakai?</summary><p>Web: Laravel, PHP, Python &amp; Flask, HTML, CSS, JavaScript. Database: SQL, MySQL, Microsoft SQL Server. Harian: VS Code, XAMPP, Laragon, Git &amp; GitHub, Microsoft Excel. IT support: troubleshooting hardware dan software, jaringan LAN/WAN, perawatan website dan SEO.</p></details>
+      <details><summary>Apakah ada demo aplikasinya?</summary><p>itsformapp adalah aplikasi internal perusahaan, jadi tidak ada demo publik. Situs itsscale.com bisa dibuka langsung.</p></details>
+      <details><summary>Bagaimana cara menghubungi?</summary><p>Lewat email dimasbayuprasogi@gmail.com atau LinkedIn. CV terbaru sedang diperbarui.</p></details>
+    </div>
+  </section>
 </main>
-</div>
-<div class="hint" id="hint">klik objek 3D · gerakkan kursor</div>
 
+<footer id="kontak" class="wrap">
+  <h2>Ada proyek atau lowongan?<br>Mari ngobrol.</h2>
+  <div class="links">
+    <a href="mailto:dimasbayuprasogi@gmail.com"><span class="mono">Email</span><span>dimasbayuprasogi@gmail.com</span></a>
+    <a href="https://www.linkedin.com/in/dimasbayuprasogi/" rel="me noopener"><span class="mono">LinkedIn</span><span>in/dimasbayuprasogi</span></a>
+    <a href="https://github.com/bayuprasogi" rel="me noopener"><span class="mono">GitHub</span><span>github.com/bayuprasogi</span></a>
+  </div>
+  <div class="foot mono"><span>© 2026 Dimas Bayu Prasogi</span><span>Jakarta · CV menyusul</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// tiap pustaka dipakai hanya kalau berhasil dimuat; kalau gagal, halaman tetap tampil tanpa animasi
+const G=!reduce&&window.gsap&&window.ScrollTrigger?gsap:null;
+const M=!reduce&&window.Motion?Motion:null;
+const ease=[.2,.8,.2,1];
+if(G)gsap.registerPlugin(ScrollTrigger);
+if(M)document.documentElement.classList.add('motion');
+
+// pecah teks jadi kata: <span class="w"><span class="wi">kata</span></span>, <br> dan tag lain dibiarkan
+function split(el){
+  const walk=n=>[...n.childNodes].forEach(c=>{
+    if(c.nodeType===3){const f=document.createDocumentFragment();
+      c.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){f.append(' ');return}
+        const o=document.createElement('span'),i=document.createElement('span');o.className='w';i.className='wi';i.textContent=p;o.append(i);f.append(o)});
+      c.replaceWith(f)}
+    else if(c.nodeType===1&&c.tagName!=='BR')walk(c)});
+  walk(el);return [...el.querySelectorAll('.wi')]}
+
+// nama di hero naik per kata begitu layar biru hilang; kalimat, tombol, dan kartu menyusul (Motion)
+const word=document.getElementById('word');
+const heroW=G?split(word):[];
+if(G)gsap.set(heroW,{yPercent:115});
+const heroBits=M?[...document.querySelectorAll('.kick,.hBot>*')]:[];
+heroBits.forEach(el=>el.style.opacity=0);
+function heroText(){
+  if(G)gsap.to(heroW,{yPercent:0,duration:1.1,ease:'power4.out',stagger:.09,delay:.1});
+  if(M)M.animate(heroBits,{opacity:[0,1],y:[28,0]},{duration:.8,ease,delay:M.stagger(.1,{startDelay:.45})})}
+
+// tanpa layar pembuka: animasi masuk mulai begitu semua skrip (termasuk 3D) siap
+let loaded=false;
+function done(){if(loaded)return;loaded=true;window.__heroIn&&window.__heroIn();heroText()}
+document.addEventListener('DOMContentLoaded',()=>setTimeout(done,reduce?0:150));setTimeout(done,2000);
+
+// Lenis: scroll halus, digerakkan dari ticker GSAP supaya ScrollTrigger selalu sinkron
+let lenis=null;
+if(!reduce&&window.Lenis){lenis=new Lenis({lerp:.1});
+  if(G){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0)}
+  else{const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf)}}
+// link menu (#tentang, #kontak, ...) ikut meluncur halus lewat Lenis
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||a.getAttribute('href')==='#')return;
+  const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();
+  const off=-(parseFloat(getComputedStyle(t).scrollMarginTop)||0);
+  if(lenis)lenis.scrollTo(t,{offset:off,duration:1.4});else t.scrollIntoView({behavior:reduce?'auto':'smooth'});
+  history.replaceState(null,'','#'+t.id)});
+
+// judul muncul per kata mengikuti scroll (GSAP + ScrollTrigger)
+if(G){
+  const big=document.querySelector('.big');
+  gsap.fromTo(split(big),{opacity:.14},{opacity:1,ease:'none',stagger:.1,scrollTrigger:{trigger:big,start:'top 85%',end:'bottom 45%',scrub:true}});
+  document.querySelectorAll('.secHead h2,#bukti h2,#kontak h2').forEach(h=>
+    gsap.fromTo(split(h),{yPercent:115,rotate:5},{yPercent:0,rotate:0,ease:'power3.out',stagger:.15,scrollTrigger:{trigger:h,start:'top 92%',end:'top 50%',scrub:.8}}));
+  document.fonts&&document.fonts.ready.then(()=>ScrollTrigger.refresh());
+}
+
+// kartu masuk saat terlihat (Motion): naik, memudar masuk, berurutan
+if(M){
+  const enter=(box,sel,from,gap,amount)=>{const b=document.querySelector(box);if(!b)return;const els=[...b.querySelectorAll(sel)];
+    els.forEach(el=>el.style.opacity=0);
+    M.inView(b,()=>{M.animate(els,{opacity:[0,1],...from},{duration:.9,ease,delay:M.stagger(gap)})
+      .then(()=>els.forEach(el=>{el.style.transform='';el.style.opacity=''}))},{amount})};
+  enter('.projs','.proj',{y:[90,0],scale:[.94,1]},.18,.15);
+  enter('.ticks','li',{y:[24,0]},.08,.3);
+  enter('.rows','.row',{y:[40,0]},.1,.1);
+  enter('.faq','details',{y:[24,0]},.07,.2);
+  enter('.links','a',{y:[30,0]},.1,.2);
+  // gambar di kartu proyek sedikit mengecil ke ukuran asli saat kartunya masuk
+  document.querySelectorAll('.proj .pane img').forEach(img=>M.inView(img,()=>{img.style.transition='none';
+    M.animate(img,{scale:[1.18,1]},{duration:1.3,ease}).then(()=>{img.style.transform='';requestAnimationFrame(()=>img.style.transition='')})},{amount:.2}));
+}
+
+// menu pil muncul setelah lewat nama
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('on',scrollY>innerHeight*.35);addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// bagian hitam: kata menyala satu per satu sesuai scroll, kartu pekerjaan ikut berganti
+const jalan=document.getElementById('jalan'),words=[...document.querySelectorAll('.words li')],jobs=[...document.querySelectorAll('.job')],dot=document.getElementById('ringDot');
+let act=-1;
+function step(){const r=jalan.getBoundingClientRect(),p=Math.min(.999,Math.max(0,-r.top/(r.height-innerHeight)));const i=Math.floor(p*words.length);
+  if(i!==act){const prev=act;act=i;words.forEach((w,k)=>w.classList.toggle('on',k===i));jobs.forEach((j,k)=>j.classList.toggle('on',k===i));
+    // kartu pekerjaan berganti dengan Motion: yang lama naik keluar, yang baru masuk dari bawah
+    if(M){if(prev>=0)M.animate(jobs[prev],{opacity:0,y:-18},{duration:.3,ease});
+      M.animate(jobs[i],{opacity:[0,1],y:[30,0],filter:['blur(8px)','blur(0px)']},{duration:.6,delay:.1,ease})}}
+  const a=p*Math.PI*2-Math.PI/2;dot.setAttribute('cx',50+49*Math.cos(a));dot.setAttribute('cy',50+49*Math.sin(a))}
+addEventListener('scroll',step,{passive:true});step();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script>
-/* ---------- Tab ---------- */
-const tabs=[...document.querySelectorAll('[role=tab]')];
-const panels=[...document.querySelectorAll('[role=tabpanel]')];
-const ids=panels.map(p=>p.id);
-const pathEl=document.getElementById('path'),bodyEl=document.getElementById('body');
-let active=0;
-function select(i,{focus=false,push=true}={}){
-  i=(i+ids.length)%ids.length;
-  if(i===active&&push)return;
-  active=i;
-  tabs.forEach((t,k)=>{t.setAttribute('aria-selected',k===i);t.tabIndex=k===i?0:-1});
-  panels.forEach((p,k)=>p.hidden=k!==i);
-  pathEl.textContent='~/dimas/'+ids[i];
-  bodyEl.scrollTop=0;
-  if(focus)tabs[i].focus();
-  if(push)history.pushState(null,'','#'+ids[i]);
-  window.onTab&&window.onTab(i);
-}
-tabs.forEach((t,i)=>{
-  t.addEventListener('click',()=>select(i));
-  t.addEventListener('keydown',e=>{
-    if(e.key==='ArrowRight'){e.preventDefault();select(i+1,{focus:true})}
-    if(e.key==='ArrowLeft'){e.preventDefault();select(i-1,{focus:true})}
-    if(e.key==='Home'){e.preventDefault();select(0,{focus:true})}
-    if(e.key==='End'){e.preventDefault();select(ids.length-1,{focus:true})}
-  });
-});
-document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>select(ids.indexOf(b.dataset.go))));
-function fromHash(){const k=ids.indexOf(location.hash.slice(1));select(k<0?0:k,{push:false})}
-addEventListener('popstate',fromHash);
-if(location.hash)fromHash();
-
-/* Varian E (gabungan): bentuk-bentuk versi awal, tapi tersusun dari partikel seperti varian C.
-   Saat ganti tab, partikel berhamburan lalu menyusun bentuk berikutnya. */
-function makeVariant(x){
-  const {S,cam,small,reduce}=x;
-  const N=small.matches?1600:2800;
-
-  // bentuk asli (sama dengan versi awal); hanya dipakai sebagai cetakan, tidak ditampilkan
-  const shapes=[];
-  shapes.push(new THREE.Mesh(new THREE.IcosahedronGeometry(1.1,0)));
-  {const g=new THREE.Group();for(let k=0;k<4;k++){const h=.35+k*.35;const m=new THREE.Mesh(new THREE.BoxGeometry(.5,h,.5));m.position.set(-.8+k*.53,h/2-.8,0);g.add(m)}shapes.push(g)}
-  {const g=new THREE.Group();[[0,0,0,.9],[.75,.55,.2,.55],[-.6,.7,-.3,.45],[.2,-.75,.4,.5]].forEach(([px,py,pz,s])=>{const m=new THREE.Mesh(new THREE.BoxGeometry(s,s,s));m.position.set(px,py,pz);m.rotation.set(px,py,pz);g.add(m)});shapes.push(g)}
-  shapes.push(new THREE.Mesh(new THREE.TorusKnotGeometry(.72,.24,96,12)));
-  {const g=new THREE.Group();g.add(new THREE.Mesh(new THREE.OctahedronGeometry(.85,1)));const r=new THREE.Mesh(new THREE.TorusGeometry(1.35,.05,8,80));r.rotation.x=1.2;g.add(r);shapes.push(g)}
-
-  // ambil titik acak di permukaan bentuk (sebanding dengan luas tiap segitiga),
-  // sebagian dirapatkan ke rusuk supaya siluetnya tegas
-  function sample(obj){
-    obj.updateMatrixWorld(true);
-    const tris=[],edges=[];let total=0,etotal=0;
-    const A=new THREE.Vector3(),Bv=new THREE.Vector3(),Cv=new THREE.Vector3(),e1=new THREE.Vector3(),e2=new THREE.Vector3();
-    obj.traverse(o=>{
-      if(!o.isMesh)return;
-      const g=o.geometry.index?o.geometry.toNonIndexed():o.geometry,p=g.attributes.position;
-      for(let i=0;i<p.count;i+=3){
-        A.fromBufferAttribute(p,i).applyMatrix4(o.matrixWorld);Bv.fromBufferAttribute(p,i+1).applyMatrix4(o.matrixWorld);Cv.fromBufferAttribute(p,i+2).applyMatrix4(o.matrixWorld);
-        total+=e1.subVectors(Bv,A).cross(e2.subVectors(Cv,A)).length()/2;
-        tris.push(A.x,A.y,A.z,Bv.x,Bv.y,Bv.z,Cv.x,Cv.y,Cv.z,total);
-      }
-      const ep=new THREE.EdgesGeometry(o.geometry,20).attributes.position;
-      for(let i=0;i<ep.count;i+=2){
-        A.fromBufferAttribute(ep,i).applyMatrix4(o.matrixWorld);Bv.fromBufferAttribute(ep,i+1).applyMatrix4(o.matrixWorld);
-        etotal+=A.distanceTo(Bv);edges.push(A.x,A.y,A.z,Bv.x,Bv.y,Bv.z,etotal);
-      }
-    });
-    const out=new Float32Array(N*3),nt=tris.length/10,ne=edges.length/7;
-    for(let i=0;i<N;i++){
-      if(ne&&Math.random()<.35){
-        const r=Math.random()*etotal;let lo=0,hi=ne-1;while(lo<hi){const m=(lo+hi)>>1;if(edges[m*7+6]<r)lo=m+1;else hi=m}
-        const s=lo*7,u=Math.random();
-        for(let d=0;d<3;d++)out[i*3+d]=edges[s+d]+(edges[s+3+d]-edges[s+d])*u;
-      }else{
-        const r=Math.random()*total;let lo=0,hi=nt-1;while(lo<hi){const m=(lo+hi)>>1;if(tris[m*10+9]<r)lo=m+1;else hi=m}
-        const s=lo*10;let u=Math.random(),v=Math.random();if(u+v>1){u=1-u;v=1-v}
-        for(let d=0;d<3;d++)out[i*3+d]=tris[s+d]+(tris[s+3+d]-tris[s+d])*u+(tris[s+6+d]-tris[s+d])*v;
-      }
-    }
-    return out;
-  }
-  const targets=shapes.map(sample);
-
-  const cur=new Float32Array(N*3),view=new Float32Array(N*3),col=new Float32Array(N*3),speed=new Float32Array(N);
-  const amberC=new THREE.Color(0xffb547),coolC=new THREE.Color(0x8fa4c8);
-  for(let i=0;i<N;i++){
-    const r=1.8+Math.random()*1.6,a=Math.random()*Math.PI*2,b=Math.acos(Math.random()*2-1);
-    cur[i*3]=r*Math.sin(b)*Math.cos(a);cur[i*3+1]=r*Math.cos(b);cur[i*3+2]=r*Math.sin(b)*Math.sin(a);
-    const c=Math.random()<.45?amberC:coolC;col[i*3]=c.r;col[i*3+1]=c.g;col[i*3+2]=c.b;
-    speed[i]=.5+Math.random();
-  }
-  const geo=new THREE.BufferGeometry();
-  geo.setAttribute('position',new THREE.BufferAttribute(view,3));
-  geo.setAttribute('color',new THREE.BufferAttribute(col,3));
-  const pts=new THREE.Points(geo,new THREE.PointsMaterial({size:.06,vertexColors:true,transparent:true,opacity:1,depthWrite:false,blending:THREE.AdditiveBlending}));
-  const spin=new THREE.Group();spin.add(pts);
-  const holder=new THREE.Group();holder.add(spin);S.add(holder);
-
-  let tgt=targets[0];
-  return {
-    hint:'gerakkan kursor · ganti tab',
-    onTab(i,instant){
-      tgt=targets[i];
-      if(!instant&&!reduce)for(let k=0;k<N*3;k++)cur[k]+=(Math.random()-.5)*1.6;
-    },
-    resize(sm){
-      if(!sm){holder.position.set(3.7,0,-1);holder.scale.setScalar(1.45);cam.pos.set(0,.4,10);cam.look.set(1.95,0,0)}
-      else{holder.position.set(0,2.7,-4);holder.scale.setScalar(1.15);cam.pos.set(0,.4,10);cam.look.set(0,0,0)}
-    },
-    update({f,t,ease,mx,my}){
-      const k0=ease(.045);
-      for(let i=0;i<N;i++){
-        const k=Math.min(1,k0*speed[i]),j=i*3;
-        cur[j]+=(tgt[j]-cur[j])*k;cur[j+1]+=(tgt[j+1]-cur[j+1])*k;cur[j+2]+=(tgt[j+2]-cur[j+2])*k;
-        const w=reduce?0:.018;
-        view[j]=cur[j]+Math.sin(t*1.3+i)*w;view[j+1]=cur[j+1]+Math.cos(t*1.1+i*1.7)*w;view[j+2]=cur[j+2];
-      }
-      geo.attributes.position.needsUpdate=true;
-      if(!reduce){spin.rotation.y+=.004*f;spin.rotation.x=Math.sin(t*.4)*.2}
-      holder.rotation.y+=((mx*.6)-holder.rotation.y)*ease(.05);
-      holder.rotation.x+=((my*.35)-holder.rotation.x)*ease(.05);
-    }
-  };
-}
-
-/* ---------- Scene 3D ---------- */
+// hero: ribuan helai garis biru mengalir di belakang, kubus kaca berisi </> di tengah,
+// dan garis penghubung dari kubus ke alat kerja (label HTML mengikuti ujung garis)
 (function(){
-  const cv=document.getElementById('scene'),win=document.getElementById('win'),hintEl=document.getElementById('hint');
-  let R;
-  try{ if(!window.THREE)throw 0; R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); }
-  catch(e){ document.body.classList.add('no3d'); cv.remove(); return; }
+const cv=document.getElementById('gl'),hline=document.querySelector('.hline'),labels=[...document.querySelectorAll('.nodes span')];
+if(!window.THREE){cv.remove();return}
+const T=THREE;let R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){cv.remove();return}
+R.setPixelRatio(Math.min(2,devicePixelRatio));
+const scene=new T.Scene(),cam=new T.PerspectiveCamera(35,1,.1,100);cam.position.set(0,0,10);
 
-  const small=matchMedia('(max-width:820px)');
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  R.setPixelRatio(Math.min(devicePixelRatio,small.matches?1.5:2));
+// helai: tiap helai 64 titik; bentuk dan geraknya dihitung di shader supaya ribuan helai tetap ringan
+const SN=1900,SP=64,pos=new Float32Array(SN*SP*3),sd=new Float32Array(SN*SP*2),idx=[];
+for(let i=0;i<SN;i++){const x0=Math.random()*2-1,r=Math.random();
+  for(let j=0;j<SP;j++){const k=i*SP+j;pos[k*3+1]=j/(SP-1);sd[k*2]=x0;sd[k*2+1]=r;if(j<SP-1)idx.push(k,k+1)}}
+const sg=new T.BufferGeometry();sg.setAttribute('position',new T.BufferAttribute(pos,3));sg.setAttribute('aSeed',new T.BufferAttribute(sd,2));sg.setIndex(idx);
+const U={uTime:{value:0},uGrow:{value:reduce?1:0},uScroll:{value:0},uSpread:{value:8},uMouse:{value:new T.Vector2()},
+  uC1:{value:new T.Color('#1a24b0')},uC2:{value:new T.Color('#b4c0ff')}};
+const strands=new T.LineSegments(sg,new T.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:T.AdditiveBlending,
+  vertexShader:`attribute vec2 aSeed;uniform float uTime,uGrow,uScroll,uSpread;uniform vec2 uMouse;varying float vA,vT;
+  void main(){float t=position.y,u=aSeed.x,r=aSeed.y;
+    // tinggi helai membentuk punggung bukit yang bergeser pelan, lebih tinggi ke kanan
+    float ridge=.5+.28*sin(u*2.6+uTime*.12+.8)+.16*sin(u*6.1-uTime*.09+1.3)+.05*sin(u*15.+r*6.)+.22*u;
+    float len=(2.+ridge*5.6)*uGrow;
+    float y=-4.4+len*(t-.18*t*t)+uScroll*1.6;
+    // helai menyapu ke samping dan bergelombang seperti rambut tersisir, ikut kursor sedikit
+    float sweep=sin(u*2.2+uTime*.18)*1.1+.6+uMouse.x*.8;
+    float wave=sin(t*2.4+u*5.+uTime*.35)*.35;
+    float x=u*uSpread+sweep*t*t*1.8+wave*t;float z=-2.-r*3.;
+    // pangkal redup, ujung terang: punggung bukit tampak menyala
+    vT=t;vA=smoothstep(0.,.25,t)*(1.-smoothstep(.8,1.,t))*(.3+.7*t*t)*(.45+.55*(1.-r));
+    gl_Position=projectionMatrix*modelViewMatrix*vec4(x,y,z,1.);}`,
+  fragmentShader:`uniform vec3 uC1,uC2;varying float vA,vT;void main(){gl_FragColor=vec4(mix(uC1,uC2,vT*vT)*vA*.62,1.);}`}));
+strands.frustumCulled=false;scene.add(strands);
 
-  const S=new THREE.Scene();
-  const C=new THREE.PerspectiveCamera(38,1,.1,100);
-  S.add(new THREE.AmbientLight(0x5a6478,.7));
-  const key=new THREE.DirectionalLight(0xffb547,1.6);key.position.set(5,6,6);S.add(key);
-  const rim=new THREE.PointLight(0x6ea8ff,1.1,30);rim.position.set(-6,-3,3);S.add(rim);
+// kubus kaca dengan </> kecil di dalamnya
+const cube=new T.Group();scene.add(cube);
+const bg=new T.BoxGeometry(1.2,1.2,1.2);
+cube.add(new T.Mesh(bg,new T.MeshStandardMaterial({color:0x9aa6ff,roughness:.25,metalness:.3,transparent:true,opacity:.2,depthWrite:false,side:T.DoubleSide})));
+cube.add(new T.LineSegments(new T.EdgesGeometry(bg),new T.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.85})));
+const poly=pts=>{const s=new T.Shape();s.moveTo(...pts[0]);pts.slice(1).forEach(p=>s.lineTo(...p));s.closePath();return s};
+const cg=new T.ExtrudeGeometry([
+  poly([[-1.1,1.25],[-2.65,0],[-1.1,-1.25],[-.65,-.92],[-1.85,0],[-.65,.92]]),
+  poly([[1.1,1.25],[2.65,0],[1.1,-1.25],[.65,-.92],[1.85,0],[.65,.92]]),
+  poly([[-.62,-1.3],[-.18,-1.3],[.62,1.3],[.18,1.3]])],{depth:.6,bevelEnabled:true,bevelThickness:.08,bevelSize:.06,bevelSegments:2,curveSegments:4});
+cg.center();
+const code=new T.Mesh(cg,new T.MeshStandardMaterial({color:0xffffff,emissive:0x2f3cff,emissiveIntensity:.6,roughness:.4}));code.scale.setScalar(.17);cube.add(code);
+scene.add(new T.AmbientLight(0xffffff,.6));
+const d1=new T.DirectionalLight(0xffffff,1);d1.position.set(3,4,6);scene.add(d1);
+const d2=new T.PointLight(0x5c68ff,1.2,8);d2.position.set(-1.5,-1,2);scene.add(d2);
 
-  const base=new THREE.MeshStandardMaterial({color:0x232a38,roughness:.32,metalness:.65,flatShading:true});
-  const light=new THREE.MeshStandardMaterial({color:0x48536a,roughness:.4,metalness:.5,flatShading:true});
-  const amber=new THREE.MeshStandardMaterial({color:0xd49335,roughness:.5,metalness:.35,emissive:0x140c00,flatShading:true});
-  const paper=new THREE.MeshStandardMaterial({color:0xe9e4d8,roughness:.8,metalness:0,flatShading:true});
-  function withEdges(mesh){
-    const e=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,20),new THREE.LineBasicMaterial({color:0xffb547,transparent:true,opacity:0}));
-    mesh.add(e);mesh.userData.edge=e;return mesh;
-  }
-  const M=(geo,mat=base)=>withEdges(new THREE.Mesh(geo,mat));
-  const B=(w,h,d,mat=base)=>M(new THREE.BoxGeometry(w,h,d),mat);
-  function at(o,x=0,y=0,z=0,rx=0,ry=0,rz=0){o.position.set(x,y,z);o.rotation.set(rx,ry,rz);return o}
-  function setEdges(obj,target,k){obj.traverse(o=>{if(o.userData.edge){const m=o.userData.edge.material;m.opacity+=(target-m.opacity)*k}})}
-  function tagIndex(obj,i){obj.traverse(o=>o.userData.index=i)}
+// garis penghubung dari kubus ke tiap label
+const NODES=[[2.5,1.45,-.6],[3.3,-.35,.4],[2.3,-1.75,.2],[-1.9,1.65,-.4],[-.4,-2.15,.5],[.9,2.25,-.8]];
+const lp=new Float32Array(NODES.length*6),lg=new T.BufferGeometry();lg.setAttribute('position',new T.BufferAttribute(lp,3));
+const links=new T.LineSegments(lg,new T.LineBasicMaterial({color:0xc9d0ff,transparent:true,opacity:.4}));links.frustumCulled=false;scene.add(links);
 
-  const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();
-  function pick(e,meshes){ptr.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight)*2+1);ray.setFromCamera(ptr,C);const h=ray.intersectObjects(meshes,false)[0];return h&&h.object.userData.index!=null?h.object.userData.index:-1}
-
-  // debu bintang + lantai, dipakai semua varian
-  const N=small.matches?250:500,pos=new Float32Array(N*3);
-  for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*[26,14,16][i%3];
-  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
-  const dust=new THREE.Points(pg,new THREE.PointsMaterial({color:0x8a93a3,size:.03}));S.add(dust);
-  const grid=new THREE.GridHelper(40,40,0x2a2f38,0x1a1e25);grid.position.y=-2.4;S.add(grid);
-
-  // kamera: varian mengisi cam.pos & cam.look, loop yang mengejar dengan halus
-  const cam={pos:new THREE.Vector3(0,.4,10),look:new THREE.Vector3(1.95,0,0)};
-  const ctx={S,C,base,light,amber,paper,withEdges,M,B,at,setEdges,tagIndex,pick,cam,small,reduce,dust};
-
-  const V=makeVariant(ctx);
-  if(V.hint)hintEl.textContent=V.hint;
-
-  let mx=0,my=0;
-  window.onTab=i=>V.onTab(i);
-  cv.addEventListener('click',e=>{const i=V.hit?V.hit(e):-1;if(i>=0){select(i);hintEl.style.opacity=0}});
-  addEventListener('pointermove',e=>{
-    mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;
-    if(!small.matches)win.style.transform=`rotateY(${8+mx*6}deg) rotateX(${-my*4}deg)`;
-    if(e.target===cv&&V.hit)cv.classList.toggle('hover',V.hit(e)>=0);
-  });
-
-  function size(){
-    const w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();
-    win.style.transform=small.matches?'none':'rotateY(8deg)';
-    V.resize(small.matches);
-  }
-  addEventListener('resize',size);size();
-  V.onTab(active,true);
-  C.position.copy(cam.pos);const curLook=cam.look.clone();C.lookAt(curLook);
-
-  const clock=new THREE.Clock();let running=true;
-  document.addEventListener('visibilitychange',()=>{running=!document.hidden;if(running){clock.getDelta();loop()}});
-  function loop(){
-    if(!running)return;
-    // langkah berbasis waktu: hasilnya sama di 30 fps maupun 144 fps
-    const dt=Math.min(clock.getDelta(),.25),f=dt*60,t=clock.elapsedTime;
-    const ease=k=>1-Math.pow(1-k,f);
-    V.update({dt,f,t,ease,mx,my});
-    if(!reduce)dust.rotation.y=t*.01;
-    C.position.x+=(cam.pos.x+mx*1.2-C.position.x)*ease(.04);
-    C.position.y+=(cam.pos.y-my*.8-C.position.y)*ease(.04);
-    C.position.z+=(cam.pos.z-C.position.z)*ease(.04);
-    curLook.lerp(cam.look,ease(.05));C.lookAt(curLook);
-    R.render(S,C);requestAnimationFrame(loop);
-  }
-  loop();
+let cx=.9,oy=0,cs=1,ns=1,W=1,H=1;
+function size(){W=cv.clientWidth;H=cv.clientHeight;if(!W||!H)return;R.setSize(W,H,false);cam.aspect=W/H;cam.updateProjectionMatrix();
+  const mob=innerWidth<700;cx=mob?0:Math.min(.9,cam.aspect*.55);oy=mob?1.55:0;cs=mob?.5:.6;ns=mob?.8:1;
+  U.uSpread.value=Math.tan(17.5*Math.PI/180)*13*cam.aspect*1.25}
+addEventListener('resize',size);size();
+let mx=0,my=0,sx=0,sy=0,intro=reduce?1:0,introT=null,last=performance.now(),tm=0;
+window.__heroIn=()=>{introT=performance.now()};if(reduce)introT=0;
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
+let vis=true;new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(cv);
+const C=new T.Vector3(),E=new T.Vector3(),V=new T.Vector3();
+function frame(now){const dt=Math.min(.1,(now-last)/1000);last=now;
+  if(vis){if(introT!==null&&!reduce)intro=Math.min(1,(now-introT)/1800);const ei=1-Math.pow(1-intro,3);
+    if(!reduce)tm+=dt;const e=1-Math.pow(.92,dt*60);sx+=(mx-sx)*e;sy+=(my-sy)*e;
+    const p=Math.min(1,scrollY/innerHeight);
+    U.uTime.value=tm;U.uGrow.value=ei;U.uScroll.value=p;U.uMouse.value.set(sx,sy);
+    C.set(cx+sx*.3,oy+p*1.8-sy*.2,0);cube.position.copy(C);
+    cube.rotation.set(.45+tm*.12+p*.9+sy*.3,.65+tm*.2+sx*.5,.08);code.rotation.y=-tm*.5;
+    cube.scale.setScalar(cs*(.4+.6*ei));cube.visible=ei>.01;
+    // ujung garis memanjang saat masuk, lalu bergoyang halus
+    const reach=Math.max(0,(ei-.3)/.7),fade=Math.max(0,1-p*1.7);
+    NODES.forEach((n,k)=>{E.set(C.x+n[0]*reach*ns+Math.sin(tm*.7+k)*.06,C.y+n[1]*reach*ns+Math.cos(tm*.6+k*2)*.06,n[2]*reach);
+      lp.set([C.x,C.y,C.z,E.x,E.y,E.z],k*6);
+      const l=labels[k];if(l){V.copy(E).project(cam);l.style.transform=`translate(${((V.x*.5+.5)*W-3).toFixed(1)}px,${((-V.y*.5+.5)*H-3).toFixed(1)}px)`;l.style.opacity=(reach*fade).toFixed(3)}});
+    lg.attributes.position.needsUpdate=true;links.material.opacity=.4*fade;
+    // garis horizontal tipis selalu lewat tengah kubus
+    V.copy(C).project(cam);hline.style.top=((-V.y*.5+.5)*H).toFixed(1)+'px';hline.style.opacity=(ei*fade).toFixed(3);
+    R.render(scene,cam)}
+  requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
 })();
 
+// ruang proyek: karya melayang di ruang biru, kamera terbang maju mengikuti scroll
+(function(){
+const sec=document.getElementById('proyek'),cv=document.getElementById('ruang');
+if(reduce||!window.THREE)return; // tanpa WebGL / gerak dikurangi: tetap kartu proyek biasa
+const T=THREE;let R;try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){return}
+sec.classList.add('ruang');window.ScrollTrigger&&ScrollTrigger.refresh();
+R.setPixelRatio(Math.min(2,devicePixelRatio));R.outputEncoding=T.sRGBEncoding;
+const scene=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,140);
+const W=3.2,GAP=8,clamp=(v,a,b)=>Math.min(b,Math.max(a,v)),pad=n=>String(n).padStart(2,'0');
+const items=[
+  {img:'img/itsformapp.jpg',ar:1200/753,kind:'Aplikasi internal',title:'itsformapp',text:'Menggantikan formulir kertas di kantor. Aplikasi internal, jadi tidak ada demo publik.',chips:['Laravel','PHP','MySQL','Blade']},
+  {panel:{lbl:'itsformapp · modul',lines:['SPK servis','Penilaian teknisi','Peminjaman barang','Surat jalan','Kunjungan + WhatsApp']},kind:'Di dalam itsformapp',title:'Lima formulir, satu aplikasi',text:'Tiap modul menggantikan satu formulir kertas yang dulu diisi manual.'},
+  {img:'img/itsscale.webp',ar:1680/966,kind:'Situs perusahaan',title:'itsscale.com',text:'Situs perusahaan timbangan digital yang saya rawat.',chips:['Website','SEO','Maintenance'],link:'https://itsscale.com',linkText:'Buka itsscale.com ↗'},
+  {panel:{lbl:'itsscale.com · perawatan',lines:['Konten & katalog','Bug & link rusak','Kecepatan halaman','SEO']},kind:'Pekerjaan rutin',title:'Merawat, bukan sekali jadi',text:'Konten, katalog produk, perbaikan bug, kecepatan, dan SEO dijaga terus.'},
+  {panel:{lbl:'dipakai setiap hari',lines:['Laravel · PHP','MySQL · SQL Server','Python · Flask','Git · GitHub']},kind:'Alat kerja',title:'Tools harian',text:'Dikerjakan di VS Code dan Laragon.'},
+  {panel:{lbl:'berikutnya',lines:['Proyek','Anda?'],cta:true},kind:'Slot terbuka',title:'Proyek berikutnya',text:'Ada aplikasi atau situs yang perlu dibangun?',link:'#kontak',linkText:'Hubungi saya'}
+];
+const N=items.length,XS=[0,1.5,-1.4,1.3,-1.2,0],YS=[0,.55,-.45,.5,-.35,0];
+document.getElementById('rTot').textContent='dari '+pad(N);
+
+// panel teks digambar di kanvas 2D lalu jadi tekstur
+function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
+function panelTex(it,i){
+  const c=document.createElement('canvas');c.width=1024;c.height=Math.round(1024/1.45);
+  const t=new T.CanvasTexture(c);t.encoding=T.sRGBEncoding;t.anisotropy=4;
+  const draw=()=>{const x=c.getContext('2d'),w=c.width,h=c.height,p=it.panel;x.clearRect(0,0,w,h);
+    rr(x,3,3,w-6,h-6,24);x.fillStyle=p.cta?'#2f3cff':'rgba(16,24,92,.95)';x.fill();x.lineWidth=3;x.strokeStyle='rgba(170,180,255,.6)';x.stroke();
+    x.textBaseline='top';x.font='500 24px "IBM Plex Mono",monospace';x.fillStyle=p.cta?'rgba(255,255,255,.8)':'#9aa3ff';
+    x.textAlign='left';x.fillText(p.lbl.toUpperCase(),56,52);x.textAlign='right';x.fillText(pad(i+1)+' / '+pad(N),w-56,52);x.textAlign='left';
+    if(p.cta){x.fillStyle='#fff';x.font='400 200px Anton,sans-serif';x.textBaseline='alphabetic';x.fillText(p.lines[0].toUpperCase(),50,h*.52);x.fillText(p.lines[1].toUpperCase(),50,h*.52+200)}
+    else{const top=140,step=(h-top-96)/p.lines.length;
+      p.lines.forEach((l,k)=>{const y=top+k*step;x.fillStyle='rgba(170,180,255,.28)';x.fillRect(56,y,w-112,2);
+        x.fillStyle='#fff';x.font='500 '+Math.min(60,step*.55)+'px "Inter Tight",sans-serif';x.fillText(l,56,y+step*.24);
+        x.fillStyle='#9aa3ff';x.font='500 22px "IBM Plex Mono",monospace';x.textAlign='right';x.fillText(pad(k+1),w-56,y+step*.34);x.textAlign='left'})}
+    x.textBaseline='alphabetic';x.font='500 20px "IBM Plex Mono",monospace';x.fillStyle=p.cta?'rgba(255,255,255,.6)':'rgba(170,180,255,.5)';x.fillText('DIMAS BAYU PRASOGI · PORTOFOLIO',56,h-48);
+    t.needsUpdate=true};
+  draw();
+  if(document.fonts)Promise.all(['400 100px Anton','500 60px "Inter Tight"','500 24px "IBM Plex Mono"'].map(f=>document.fonts.load(f))).then(draw,()=>{});
+  return t}
+
+// karya utama: tiap karya jadi bidang datar dengan bingkai tipis
+const loader=new T.TextureLoader(),deco=[];
+function decoFrom(t){ // potongan kecil gambar yang sama, melayang redup di pinggir
+  for(let k=0;k<7;k++){const d=t.clone();d.repeat.set(.42,.42);d.offset.set(Math.random()*.58,Math.random()*.58);d.needsUpdate=true;
+    const s=.7+Math.random()*1.3,side=Math.random()<.5?-1:1;
+    const m=new T.Mesh(new T.PlaneGeometry(s*1.4,s),new T.MeshBasicMaterial({map:d,transparent:true,depthWrite:false,opacity:0}));
+    m.position.set(side*(3.8+Math.random()*5),(Math.random()-.5)*6.5,6-Math.random()*(N*GAP+10));m.rotation.y=-side*.25;
+    m.userData.base=.12+Math.random()*.14;scene.add(m);deco.push(m)}}
+const panes=items.map((it,i)=>{const ar=it.ar||1.45,h=W/ar;let map;
+  if(it.img){map=loader.load(it.img,decoFrom);map.encoding=T.sRGBEncoding;map.anisotropy=4}else map=panelTex(it,i);
+  const m=new T.Mesh(new T.PlaneGeometry(W,h),new T.MeshBasicMaterial({map,transparent:true,depthWrite:false}));
+  const fr=new T.LineSegments(new T.EdgesGeometry(new T.PlaneGeometry(W+.16,h+.16)),new T.LineBasicMaterial({color:0xaab4ff,transparent:true}));
+  const g=new T.Group();g.add(m,fr);g.position.set(XS[i],YS[i],-i*GAP);scene.add(g);return{g,m,fr}});
+// bingkai kosong seperti penanda di ruang
+for(let k=0;k<12;k++){const s=.5+Math.random()*1.2,side=k%2?1:-1;
+  const f=new T.LineSegments(new T.EdgesGeometry(new T.PlaneGeometry(s*1.5,s)),new T.LineBasicMaterial({color:0x8f97ff,transparent:true,opacity:0}));
+  f.position.set(side*(2.6+Math.random()*6),(Math.random()-.5)*7,6-Math.random()*(N*GAP+10));f.userData.base=.35;scene.add(f);deco.push(f)}
+// debu bintang
+const SN=1500,sp=new Float32Array(SN*3);
+for(let k=0;k<SN;k++){sp[k*3]=(Math.random()-.5)*34;sp[k*3+1]=(Math.random()-.5)*20;sp[k*3+2]=16-Math.random()*(N*GAP+40)}
+const sg=new T.BufferGeometry();sg.setAttribute('position',new T.BufferAttribute(sp,3));
+const stars=new T.Points(sg,new T.PointsMaterial({color:0xb8c2ff,size:.04,transparent:true,opacity:.75,depthWrite:false}));scene.add(stars);
+
+let D=5.4;
+function size(){const w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+  // jarak kamera: karya di depan tidak lebih dari ~52% tinggi layar dan ~88% lebar layar
+  D=Math.max(6.4,W*1.14/(2*Math.tan(20*Math.PI/180)*cam.aspect))}
+addEventListener('resize',size);size();
+
+// HUD dan keterangan di bawah karya yang sedang di depan
+const cap=document.getElementById('rCap'),num=document.getElementById('rNum'),bar=document.getElementById('rBar'),co=document.getElementById('rCo'),arc=document.getElementById('rArc'),rdot=document.getElementById('rDot');
+const go=cap.querySelector('.go');
+function fill(i){const it=items[i];cap.querySelector('.k').textContent=it.kind;cap.querySelector('.pill').textContent=it.title;cap.querySelector('.t').textContent=it.text;
+  cap.querySelector('.chips').innerHTML=(it.chips||[]).map(c=>'<span>'+c+'</span>').join('');
+  go.hidden=!it.link;if(it.link){go.href=it.link;go.textContent=it.linkText;if(/^http/.test(it.link))go.rel='noopener';else go.removeAttribute('rel')}}
+let capOn=null;
+function setCap(on){if(on===capOn)return;capOn=on;go.style.pointerEvents=on?'auto':'none';
+  if(M)M.animate(cap,on?{opacity:[0,1],y:[14,0],filter:['blur(6px)','blur(0px)']}:{opacity:0,y:-8,filter:'blur(4px)'},{duration:on?.5:.25,ease});
+  else cap.style.opacity=on?1:0}
+if(G){const h=sec.querySelector('.hud h2');gsap.fromTo(split(h),{yPercent:115},{yPercent:0,duration:1,ease:'power4.out',scrollTrigger:{trigger:sec,start:'top 60%'}})}
+
+// jalur kamera: mulai dari belakang, berhenti sebentar di depan tiap karya
+const sm=k=>k*k*k*(k*(k*6-15)+10),A=new T.Vector3(),C=new T.Vector3(),START=new T.Vector3(0,0,GAP*1.3);
+function at(s,out){if(s<=0)return out.copy(START).lerp(panes[0].g.position,sm(clamp(s+1,0,1)));
+  const i=Math.min(N-1,Math.floor(s)),j=Math.min(N-1,i+1);return out.copy(panes[i].g.position).lerp(panes[j].g.position,sm(s-i))}
+let act=-1,mx=0,my=0,sx=0,sy=0,vis=false;const t0=performance.now();
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
+new IntersectionObserver(([e])=>{vis=e.isIntersecting;if(vis)size()}).observe(sec);
+function frame(now){requestAnimationFrame(frame);if(!vis)return;
+  const r=sec.getBoundingClientRect(),p=clamp(-r.top/(r.height-innerHeight),0,1),s=Math.min(N-1,-1+p*(N+.35)),tm=(now-t0)/1000;
+  at(s,A);sx+=(mx-sx)*.06;sy+=(my-sy)*.06;
+  cam.position.set(A.x+sx*.7,A.y-.2-sy*.45+Math.sin(tm*.6)*.05,A.z+D);C.set(A.x,A.y-.2,A.z);cam.lookAt(C);
+  panes.forEach(o=>{const dz=o.g.position.z-A.z,f=clamp(1-Math.abs(dz)/GAP,0,1);
+    const op=clamp(dz>0?1-dz/(D*.7):1+dz/(GAP*2.6),0,1);
+    o.g.visible=op>.01;o.m.material.opacity=op;o.m.material.color.setScalar(.4+.6*f);o.fr.material.opacity=op*(.2+.55*f);
+    o.g.rotation.set(sy*.04,-o.g.position.x*.06+sx*.06,0)});
+  // hiasan: muncul pelan dari kejauhan, hilang saat lewat kamera
+  deco.forEach(m=>{const ahead=cam.position.z-m.position.z;m.material.opacity=m.userData.base*clamp((ahead-.5)/2,0,1)*clamp(1-ahead/36,0,1)});
+  stars.rotation.z=tm*.008;
+  R.render(scene,cam);
+  const a=Math.round(clamp(s,0,N-1));if(a!==act){act=a;num.textContent=pad(a+1);fill(a)}
+  setCap(s>-.3&&Math.abs(s-Math.round(s))<.3);
+  bar.style.width=(p*100).toFixed(1)+'%';
+  const q=Math.min(p,.999),ang=q*Math.PI*2-Math.PI/2,ex=50+47*Math.cos(ang),ey=50+47*Math.sin(ang);
+  arc.setAttribute('d','M50 3 A47 47 0 '+(q>.5?1:0)+' 1 '+ex.toFixed(2)+' '+ey.toFixed(2));rdot.setAttribute('cx',ex.toFixed(2));rdot.setAttribute('cy',ey.toFixed(2));
+  co.innerHTML='X '+cam.position.x.toFixed(2)+'<br>Y '+cam.position.y.toFixed(2)+'<br>Z '+(-cam.position.z).toFixed(2)}
+requestAnimationFrame(frame);
+})();
 </script>
 </body></html>
